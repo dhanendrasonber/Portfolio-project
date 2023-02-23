@@ -1,0 +1,103 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+{% block body %}
+<header id="header" class="header-top">
+  <div class="container">
+
+    <h1><a href="index.html">Dhanendra Kumar Sonber</a></h1>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link" href="/home">Home</a></li>
+        <li><a class="nav-link" href="/about/#about">About</a></li>
+        <li><a class="nav-link" href="/project/#project">Projects</a></li> 
+        <li><a class="nav-link" href="/resume/#resume">Resume</a></li>
+        <li><a class="nav-link active" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    
+  </div>
+</header><!-- End Header -->
+
+
+<!-- start contact -->
+
+<section id="contact" class="contact section">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Contact Me</p>
+    </div>
+
+    <div class="row mt-2">
+
+      <div class="col-md-6 d-flex align-items-stretch">
+        <div class="info-box">
+          <i class="bx bx-map"></i>
+          <h3>Current Address</h3>
+          <p>Smriti Nagar Bhilai,Chhattisgarh</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+        <div class="info-box">
+          <i class="bx bx-share-alt"></i>
+          <h3>Social Profiles</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/dhanendra.sonber.71" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/dhanendra_sonber" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/dhanendra-kumar-sonber-6a16ba251" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/dhanendrasonber" class="github"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-4 d-flex align-items-stretch">
+        <div class="info-box">
+          <i class="bx bx-envelope"></i>
+          <h3>Email Me</h3>
+          <p>dhanendrakumarsonber@gmail.com</p>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4 d-flex align-items-stretch">
+        <div class="info-box">
+          <i class="bx bx-phone-call"></i>
+          <h3>Call Me</h3>
+          <p>+91 9406317415</p>
+        </div>
+      </div>
+    </div>
+
+      <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="name" class="form-control" id="name" name="name" placeholder="Ex: Dhanendra Kumar Sonber">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Ex: name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone No.:</label>
+        <input type="number" class="form-control" id="phone" name="phone" placeholder="Ex: 1234567890">
+      </div>
+      <div class="mb-3">
+        <label for="concern" class="form-label">Concern:</label>
+        <textarea class="form-control" id="concern" rows="3" name="concern" placeholder="Ex: “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”"></textarea>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      
+
+  </div>
+</section>
+{% endblock body %}

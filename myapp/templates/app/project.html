@@ -1,0 +1,68 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+{% block body %}
+<header id="header" class="header-top">
+  <div class="container">
+
+    <h1><a href="index.html">Dhanendra Kumar Sonber</a></h1>
+    <h2>I'm a passionate <span>Python Developer</span> from Bhilai </h2>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link" href="/home">Home</a></li>
+        <li><a class="nav-link" href="/about/#about">About</a></li>
+        <li><a class="nav-link active" href="#project">Projects</a></li> 
+        <li><a class="nav-link" href="/resume/#resume">Resume</a></li>
+        <li><a class="nav-link" href="/contact/#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    
+  </div>
+</header><!-- End Header -->
+    
+<section id="project" class="project section">
+    <div class="container">
+    <div class="section-title">  
+    <div><h1> My Projects </h1>
+      
+      <div class="container my-0">
+        <h2 class="cardtitle text-center my-3 py-3">My Projects</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card" style="width:13rem; background: #33ccff;">
+                <img src="https://source.unsplash.com/random/250x150/?python,programming" class="card-img-top" alt="https://source.unsplash.com/random/1700x400/?linkedin">
+                  <div class="card-body">
+                    <center><h5 class="card-title">Basic Python</h5></center>
+                    <center><a href="/projectlist/#projectlist1" class="btn btn-primary">View Project</a></center>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="width: 13rem; background: #33ccff;">
+                <img src="https://source.unsplash.com/random/250x150/?machinelearning" class="card-img-top" alt="https://source.unsplash.com/random/1700x400/?linkedin">
+                  <div class="card-body">
+                    <center><h5 class="card-title">Machine Learning</h5></center>
+                    <center><a href="/projectlist/#projectlist2" class="btn btn-primary">View Project</a></center>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="width:13rem; background: #33ccff;">
+                <img src="https://source.unsplash.com/random/250x150/?Django" class="card-img-top" alt="https://source.unsplash.com/random/1700x400/?linkedin">
+                  <div class="card-body">
+                    <center><h5 class="card-title">Django</h5></center>
+                    <center><a href="/projectlist/#projectlist3" class="btn btn-primary">View Project</a></center>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+        
+    </div>
+    </div>
+    </div>
+    </section>
+{% endblock body %}
